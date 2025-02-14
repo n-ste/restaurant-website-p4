@@ -1,0 +1,31 @@
+/* Font Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    border-bottom: 5px solid #D77A61;
+}
+.bg-gunmetal {
+    background-color: #223843;
+}
+
+.navbar-brand {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+li a {
+    color: #EFF1F3;
+}
+li a:hover {
+    color: #D77A61;
+}
+
+.active {
+    font-weight: 800;
+}
