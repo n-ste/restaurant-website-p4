@@ -21,11 +21,12 @@ nav {
 
 li a {
     color: #EFF1F3;
+    font-weight: 500;
 }
 li a:hover {
     color: #D77A61;
 }
 
 .active {
-    font-weight: 800;
+    font-weight: 900;
 }
