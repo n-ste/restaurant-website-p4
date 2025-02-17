@@ -8,6 +8,7 @@
 
 nav {
   border-bottom: 5px solid #d77a61;
+  align-items: end;
 }
 .bg-gunmetal {
   background-color: #223843;
@@ -16,16 +17,20 @@ nav {
 .navbar-brand {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+#navbar {
+  margin: 25px 0;
+  justify-content: flex-end;
 }
 
 li a {
   color: #eff1f3;
   font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
   margin-left: 10px;
 }
 li a:hover {
