@@ -59,6 +59,10 @@ li a:hover {
   background-size: cover;
 }
 
+.container {
+  margin-top: 70px;
+}
+
 .row {
   margin-top: 20px;
   justify-content: center;
