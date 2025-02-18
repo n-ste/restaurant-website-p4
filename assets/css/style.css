@@ -74,6 +74,11 @@ li a:hover {
   line-height: 40px;
   font-size: 1.25rem;
 }
+.meal-image {
+  height: 400px;
+  width: 400px;
+border-radius: 50%;
+}
 
 .row {
   margin-bottom: 10px;
