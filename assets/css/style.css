@@ -8,6 +8,7 @@
 
 .main {
   padding: 25px;
+  margin-top: 60px;
 }
 
 nav {
@@ -91,7 +92,6 @@ li a:hover {
 
 .menu-summary {
 padding: 40px;
-margin-top: 60px;
 line-height: 40px;
 }
 
