@@ -14,7 +14,8 @@ nav {
   background-color: #223843;
 }
 
-.navbar-brand {
+.navbar-brand,
+h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   letter-spacing: 1px;
@@ -66,4 +67,31 @@ li a:hover {
 
 .column {
   background-color: rgba(219, 211, 216, 0.2);
+}
+
+footer {
+  color: #eff1f3;
+  border-top: 5px solid #d77a61;
+  background-color: #223843;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-headings {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.opening-hours {
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.credits {
+  padding: 15px;
+  border-top: 3px solid #d77a61;
+  text-align: center;
 }
