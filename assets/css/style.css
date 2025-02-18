@@ -37,6 +37,10 @@ li a {
 li a:hover {
   color: #d77a61;
 }
+.nav-link {
+  padding: 0;
+  margin: 15px;
+}
 
 .active {
   font-weight: 900;
