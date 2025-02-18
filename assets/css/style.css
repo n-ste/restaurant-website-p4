@@ -6,6 +6,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+.main {
+  padding: 25px;
+}
+
 nav {
   border-bottom: 5px solid #d77a61;
   align-items: end;
@@ -64,16 +68,33 @@ li a:hover {
   background-size: cover;
 }
 
-.container {
-  margin: 130px auto;
+.container,
+.menu-container {
+  margin: auto auto 130px auto;
   justify-content: center;
   background-color: rgba(239, 241, 243, 0.2);
 }
+
 .summary {
   text-align: justify;
   line-height: 40px;
   font-size: 1.25rem;
 }
+
+.menu {
+  justify-content: center;
+  text-align: center;
+  margin: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.menu-summary {
+padding: 40px;
+margin-top: 60px;
+line-height: 40px;
+}
+
 .meal-image {
   height: 400px;
   width: 400px;
@@ -88,6 +109,10 @@ border-radius: 50%;
 .summary .container {
   padding: 40px;
   background-color: rgba(219, 211, 216, 0.2);
+}
+
+.container {
+  margin-bottom: 120px;
 }
 
 .heading {
