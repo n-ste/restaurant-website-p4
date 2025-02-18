@@ -15,7 +15,8 @@ nav {
 }
 
 .navbar-brand,
-h1 {
+h1,
+.meal-type {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   letter-spacing: 1px;
@@ -77,12 +78,19 @@ li a:hover {
   background-color: rgba(219, 211, 216, 0.2);
 }
 
+.meal-type {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+}
+
 footer {
   color: #eff1f3;
   border-top: 5px solid #d77a61;
   background-color: #223843;
   padding: 20px;
-  position: fixed;
   width: 100%;
   bottom: 0;
 }
