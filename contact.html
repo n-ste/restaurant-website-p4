@@ -13,6 +13,18 @@
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon/favicon-32x32.png">
 
     <title>Ristorante Amalfi</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "OqIVy09IQAJHvq796",
+      });
+      emailjs.send("gmail", "restaurant-contact", {name: "Nathan", notes: "Check this out!"})
+   })();
+</script>
+
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-gunmetal">
@@ -33,15 +45,22 @@
     <div class="main">
       <div class="container">
         <div class="row">
-          <div class="col-12"> <div class="column p-3 border">Col 1</div></div>
+          <div class="col-12"> <div class="column p-3 border">
+            <h2 class="heading">Contact Us</h2>
+
+            <div class="center-form">
+              <form>
+                <input type="text" name="name" id="fullname" class="form-control form-labels" placeholder="Name" required>
+                <input type="text" name="email" id="emailaddress" class="form-control form-labels" placeholder="Email" required>
+                <textarea rows="5" name="content" id="content" class="form-control form-labels" placeholder="Message description" required></textarea>
+                  <div class="col contact-btn">
+                    <button type="submit" class="btn btn-info">Send Message</button>
+                  </div>
+
+              </form>
+            </div>
+          </div></div>
         </div>
-          <div class="row">
-              <div class="col-sm-12 col-md-6"> <div class="column p-3 border">Col 2</div></div>
-              <div class="col-sm-12 col-md-6"> <div class="column p-3 border">Col 3</div></div>
-          </div>
-          <div class="row">
-            <div class="col-12"> <div class="column p-3 border">Col 4</div></div>
-          </div>
       </div>
     </div>
     <footer>

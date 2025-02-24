@@ -163,6 +163,18 @@ border-radius: 50%;
   justify-content: center;
   text-align: center;
 }
+
+.contact-btn {
+  margin: 40px 0 0;
+  padding-bottom: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.form-labels {
+  margin: 10px 0;
+  
+}
 footer {
   color: #eff1f3;
   border-top: 5px solid #d77a61;
