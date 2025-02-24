@@ -21,7 +21,6 @@
       emailjs.init({
         publicKey: "OqIVy09IQAJHvq796",
       });
-      emailjs.send("gmail", "restaurant-contact", {name: "Nathan", notes: "Check this out!"})
    })();
 </script>
 
@@ -49,14 +48,13 @@
             <h2 class="heading">Contact Us</h2>
 
             <div class="center-form">
-              <form>
+              <form onsubmit="return sendMail(this);">
                 <input type="text" name="name" id="fullname" class="form-control form-labels" placeholder="Name" required>
                 <input type="text" name="email" id="emailaddress" class="form-control form-labels" placeholder="Email" required>
-                <textarea rows="5" name="content" id="content" class="form-control form-labels" placeholder="Message description" required></textarea>
+                <textarea rows="5" name="messagecontent" id="messagecontent" class="form-control form-labels" placeholder="Message description" required></textarea>
                   <div class="col contact-btn">
                     <button type="submit" class="btn btn-info">Send Message</button>
                   </div>
-
               </form>
             </div>
           </div></div>
@@ -64,6 +62,7 @@
       </div>
     </div>
     <footer>
+      <script src="assets/js/contact.js"></script>
       <h1><i class="fa-solid fa-utensils"></i> Ristorante Amalfi</h1>
       <div class="row">
         <div class="col-sm-12 col-md-4">
