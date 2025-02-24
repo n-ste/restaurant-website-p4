@@ -6,11 +6,11 @@ function sendMail(contactForm) {
     })
     .then(
         function(response) {
-            console.log("SUCCESS", response);
+            console.log("Success", response);
         },
         function(error) {
-            console.log("FAILED", error);
+            console.log("Failed", error);
         }
     );
-    return false;  // To block from loading a new page
+    return false;
 }
