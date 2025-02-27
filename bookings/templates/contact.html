@@ -9,7 +9,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon/favicon-32x32.png">
 
     <title>Ristorante Amalfi</title>
@@ -27,18 +27,30 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-gunmetal">
-        <a href="#" class="navbar-brand"><i class="fa-solid fa-utensils"></i> Ristorante Amalfi</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="nav justify-content-center">
-            <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="/menu.html">Menu</a></li>
-            <li class="nav-item"><a class="nav-link" href="/bookings/templates/bookings.html">Bookings</a></li>
-            <li class="nav-item"><a class="nav-link active" href="/contact.html">Contact Us</a></li>
+      <a href="#" class="navbar-brand"><i class="fa-solid fa-utensils"></i> Ristorante Amalfi</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('menu') }}">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('bookings') }}">Bookings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{{ url_for('contact') }}">Contact Us</a>
+          </li>
         </ul>
-        </div>
+      </div>
     </nav>
     <div class="hero-image"></div>
     <div class="main">
