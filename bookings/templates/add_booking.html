@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="main">
+    <section class="summary border container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="heading">Create Booking</h4>
+        </div>
+      </div>
+      <!-- Reservation Name -->
+      <div class="row">
+        <form class="col-12" method="POST" action="{{ url_for('add_booking') }}">
+            <div class="form-row center">
+                <div class="col-sm-12 col-md-6">
+                    <label for="reservation_name" class="uppercase">Please enter your full name</label>
+                    <input id="reservation_name" name="reservation_name" type="text" class="form-control" placeholder="Full name" type="text" minlength="3" maxlength="50" required>
+                </div>
+            </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="row reservation-btns">
+        <div class="col-12">
+            <button type="submit" class="btn btn-view-booking">
+            <i class="fa-solid fa-plus"></i> Create Booking
+        </button>      
+        </div> 
+     </div>
+    </form>
+
+     <!--<div class="row">
+        {% for reservation in reservations %}
+        <div class="col-sm-12 col-md-4">
+            <div class="card center">
+                <div class="card-body">
+                  <h5 class="card-title">{{ reservation.reservation_name }}</h5>
+                </div>
+                <div class="row center">
+                    <a href="{{ url_for('amend-booking.html', reservation_id)}}" class="btn btn-view-booking">Confirm Booking</a>
+                  </div>
+              </div>
+        </div>
+        {% endfor %}-->
+     </div>
+    </section>
+</div>
+    
+{% endblock %}

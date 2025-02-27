@@ -3,7 +3,7 @@ from bookings import db
 
 class Reservation(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    reservation_name = db.Column(db.String(75), unique=True, nullable=False)
+    reservation_name = db.Column(db.String(50), unique=True, nullable=False)
     customer = db.relationship("Customer", backref="reservation", cascade="all, delete", lazy=True)
 
     def __repr__(self):

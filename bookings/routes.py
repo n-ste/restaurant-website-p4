@@ -15,9 +15,10 @@ def menu():
 
 @app.route("/bookings")
 def bookings():
-    reservation = list(Reservation.query.order_by(Reservation.reservation_name).all())
-    return render_template("reservations.html", reservations=reservation)
+    # reservation = list(Reservation.query.order_by(Reservation.reservation_name).all())
+    return render_template("reservations.html")
 
+# ^, reservations=reservation
 
 @app.route("/contact")
 def contact():
@@ -31,4 +32,9 @@ def add_booking():
         db.session.add(booking)
         db.session.commit()
         return redirect(url_for("bookings"))
-    return render_template("add-booking.html")
+    return render_template("add_booking.html")
+
+
+@app.route("/amend_booking", methods=["GET", "POST"])
+def amend_booking():
+    return render_template("amend_booking.html")

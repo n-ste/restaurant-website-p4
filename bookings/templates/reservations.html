@@ -17,32 +17,31 @@
             take care of the rest - from fresh pasta to delicious wines,
             every meal is a celebration of Italy's finest culinary
             traditions. We look forward to serving you!</p>
+
+            <div class="center">
+                <a href="{{ url_for('add_booking') }}" class="btn btn-view-booking">
+                    <i class="fa-solid fa-plus"></i> Create Booking
+                </a>
+            </div>
         </div>
       </div>
-
-      <div class="row reservation-btns">
-        <div class="col-12">
-         <form action="{{ url_for('add_booking') }}">
-             <button type="submit" class="btn btn-info"><i class="fa-solid fa-plus"></i> Add Booking</button>
-           </form>       
-        </div> 
-     </div>
-
+      <!--
      <div class="row">
         {% for reservation in reservations %}
         <div class="col-sm-12 col-md-4">
             <div class="card center">
                 <div class="card-body">
                   <h5 class="card-title">{{ reservation.reservation_name }}</h5>
-                  <div class="row center">
-                    <a href="#" class="btn btn-view-booking">Confirm Booking</a>
-                  </div>
                 </div>
-              </div>
+                <div class="row center">
+                    <a href="{{ url_for('add-booking.html', reservation_id=reservation.id) }}" class="btn btn-view-booking">Add Booking</a>
+                </div>
+            </div>
         </div>
-        {% endfor %}
-     </div>
+    </div>
+    {% endfor %}
+    -->
     </section>
 </div>
-    
+
 {% endblock %}
