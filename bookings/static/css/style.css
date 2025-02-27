@@ -161,6 +161,7 @@ border-radius: 50%;
   font-weight: 700;
   height: 40px;
   width: 220px;
+  margin: 5px;
 }
 
 .btn-view-booking:hover {

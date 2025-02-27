@@ -25,7 +25,7 @@
             </div>
         </div>
       </div>
-      <!--
+      
      <div class="row">
         {% for reservation in reservations %}
         <div class="col-sm-12 col-md-4">
@@ -34,13 +34,17 @@
                   <h5 class="card-title">{{ reservation.reservation_name }}</h5>
                 </div>
                 <div class="row center">
-                    <a href="{{ url_for('add-booking.html', reservation_id=reservation.id) }}" class="btn btn-view-booking">Add Booking</a>
+                    <a href="{{ url_for('add_booking', reservation_id=reservation.id) }}" class="btn btn-view-booking">Add Details</a>
+                    <a href="{{ url_for('amend_booking', reservation_id=reservation.id)}}" class="btn btn-view-booking">Amend Booking</a>
+                    <a href="#" class="btn btn-view-booking">Delete Booking</a>
+
+
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-    -->
+    
     </section>
 </div>
 
