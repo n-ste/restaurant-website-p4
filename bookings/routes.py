@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect, url_for
 from bookings import app, db
-from bookings.models import Reservation, Customer
+from bookings.models import Reservation  #, Customer
 
 
 @app.route("/")
@@ -42,3 +42,11 @@ def amend_booking(reservation_id):
         db.session.commit()
         return redirect(url_for("bookings"))
     return render_template("amend_booking.html", reservation=reservation)
+
+
+@app.route("/delete_reservation/<int:reservation_id>")
+def delete_reservation(reservation_id):
+    reservation = Reservation.query.get_or_404(reservation_id)
+    db.session.delete(reservation)
+    db.session.commit()
+    return redirect(url_for("bookings"))

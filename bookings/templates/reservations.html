@@ -34,9 +34,9 @@
                   <h5 class="card-title">{{ reservation.reservation_name }}</h5>
                 </div>
                 <div class="row center">
-                    <a href="{{ url_for('add_booking', reservation_id=reservation.id) }}" class="btn btn-view-booking">Add Details</a>
+                    <a href="{{ url_for('add_booking', reservation_id=reservation.id) }}" class="btn btn-view-booking">Complete Booking</a>
                     <a href="{{ url_for('amend_booking', reservation_id=reservation.id)}}" class="btn btn-view-booking">Amend Booking</a>
-                    <a href="#" class="btn btn-view-booking">Delete Booking</a>
+                    <a href="{{ url_for('delete_reservation', reservation_id=reservation.id) }}" class="btn btn-view-booking">Cancel Booking</a>
 
 
                 </div>
