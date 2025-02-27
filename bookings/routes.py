@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, request, redirect, url_for
 from bookings import app, db
 from bookings.models import Reservation, Customer
 
@@ -21,3 +21,13 @@ def bookings():
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
+
+
+@app.route("/add_booking", methods=["GET", "POST"])
+def add_booking():
+    if request.method == "POST":
+        booking = Reservation(reservation_name=request.form.get("reservation_name"))
+        db.session.add(booking)
+        db.session.commit()
+        return redirect(url_for("bookings"))
+    return render_template("add-booking.html")

@@ -81,12 +81,12 @@
   
           <div class="row summary-btns">
             <div class="col-6">
-              <form action="/bookings/templates/bookings.html">
+              <form action="{{ url_for('bookings') }}">
                 <button type="submit" class="btn btn-info">Book Now</button>
               </form>
             </div>
             <div class="col-6">
-              <form action="/menu.html">
+              <form action="{{ url_for('menu') }}">
                 <button type="submit" class="btn btn-info">View Our Menu</button>
               </form>
             </div>
