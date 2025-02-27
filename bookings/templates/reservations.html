@@ -27,6 +27,21 @@
            </form>       
         </div> 
      </div>
+
+     <div class="row">
+        {% for reservation in reservations %}
+        <div class="col-sm-12 col-md-4">
+            <div class="card center">
+                <div class="card-body">
+                  <h5 class="card-title">{{ reservation.reservation_name }}</h5>
+                  <div class="row center">
+                    <a href="#" class="btn btn-view-booking">Confirm Booking</a>
+                  </div>
+                </div>
+              </div>
+        </div>
+        {% endfor %}
+     </div>
     </section>
 </div>
     

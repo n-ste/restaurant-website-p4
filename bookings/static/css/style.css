@@ -103,6 +103,11 @@ line-height: 40px;
 border-radius: 50%;
 }
 
+.center {
+  justify-content: center;
+  text-align: center;
+}
+
 .row {
   margin-bottom: 10px;
 }
@@ -143,6 +148,29 @@ border-radius: 50%;
   font-weight: 800;
   color: #d77a61;
 }
+
+.btn-view-booking {
+  background-color: #d77a61;
+  border: 2px solid #d77a61;
+  color: #ffffff;
+  font-weight: 700;
+  height: 40px;
+  width: 220px;
+}
+
+.btn-view-booking:hover {
+  background-color: #ffffff;
+  border: 2px solid #d77a61;
+  color: #d77a61;
+}
+
+.card {
+  margin: 50px 0;
+}
+.card-title {
+  margin: 60px 0;
+}
+
 .btn-info {
   background-color: #d77a61;
   border: 2px solid #d77a61;
@@ -167,8 +195,8 @@ border-radius: 50%;
 }
 
 .reservation-btns {
-  margin: 80px 0 0;
-  padding: 40px;
+  margin: 60px 0 0;
+  padding: 20px;
   justify-content: center;
   text-align: center;
 }

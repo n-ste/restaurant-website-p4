@@ -15,7 +15,8 @@ def menu():
 
 @app.route("/bookings")
 def bookings():
-    return render_template("reservations.html")
+    reservation = list(Reservation.query.order_by(Reservation.reservation_name).all())
+    return render_template("reservations.html", reservations=reservation)
 
 
 @app.route("/contact")
