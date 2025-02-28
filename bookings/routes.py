@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect, url_for
 from bookings import app, db
-from bookings.models import Reservation  #, Customer
+from bookings.models import Reservation, Customer
 
 
 @app.route("/")
@@ -50,3 +50,20 @@ def delete_reservation(reservation_id):
     db.session.delete(reservation)
     db.session.commit()
     return redirect(url_for("bookings"))
+
+
+@app.route("/add_customer", methods=["GET", "POST"])
+def add_customer():
+    reservation = list(Reservation.query.order_by(Reservation.reservation_name).all())
+    if request.method == "POST":
+        customer = Customer(
+            first_name=request.form.get("first_name"),
+            last_name=request.form.get("last_name"),
+            customer_contact=request.form.get("customer_contact"),
+            customer_email=request.form.get("customer_email"),
+            reservation_date=request.form.get("reservation_date"),
+        )
+        db.session.add(customer)
+        db.session.commit()
+        return redirect(url_for("bookings"))
+    return render_template("add_customer.html", reservation=reservation)

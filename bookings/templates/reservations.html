@@ -4,9 +4,10 @@
 <div class="main">
     <section class="summary border container">
       <div class="row">
+        <!-- Heading -->
         <div class="col-12">
           <h2 class="heading">Make a booking with us today!</h4>
-
+            <!-- Section Paragraph -->
           <p>Buongiorno and welcome to our online booking page! Whether
             you're planning an intimate dinner for two or a festive
             gathering with family and friends, we are thrilled to host you
@@ -19,6 +20,7 @@
             traditions. We look forward to serving you!</p>
 
             <div class="center">
+                <!-- Bookings Button -->
                 <a href="{{ url_for('add_booking') }}" class="btn btn-view-booking">
                     <i class="fa-solid fa-plus"></i> Create Booking
                 </a>
@@ -29,22 +31,21 @@
      <div class="row">
         {% for reservation in reservations %}
         <div class="col-sm-12 col-md-4">
+            <!-- Reservation Contact Cards -->
             <div class="card center">
                 <div class="card-body">
                   <h5 class="card-title">{{ reservation.reservation_name }}</h5>
                 </div>
+                <!-- Complete Booking, Amend Booking and Cancel Booking Buttons -->
                 <div class="row center">
-                    <a href="{{ url_for('add_booking', reservation_id=reservation.id) }}" class="btn btn-view-booking">Complete Booking</a>
+                    <a href="{{ url_for('add_customer', reservation_id=reservation.id) }}" class="btn btn-view-booking">Complete Booking</a>
                     <a href="{{ url_for('amend_booking', reservation_id=reservation.id)}}" class="btn btn-view-booking">Amend Booking</a>
                     <a href="{{ url_for('delete_reservation', reservation_id=reservation.id) }}" class="btn btn-view-booking">Cancel Booking</a>
-
-
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
-    
     </section>
 </div>
 

@@ -32,10 +32,12 @@
      <div class="row">
         {% for reservation in reservations %}
         <div class="col-sm-12 col-md-4">
+          <!-- Reservation Contact Cards -->
             <div class="card center">
                 <div class="card-body">
                   <h5 class="card-title">{{ reservation.reservation_name }}</h5>
                 </div>
+                <!-- Confirm  Button -->
                 <div class="row center">
                     <a href="{{ url_for('amend-booking.html', reservation_id)}}" class="btn btn-view-booking">Confirm Booking</a>
                   </div>

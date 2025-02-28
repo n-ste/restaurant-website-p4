@@ -14,8 +14,7 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="/assets/images/favicon/favicon-32x32.png"
-    />
+      href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}"/>
 
     <title>Ristorante Amalfi</title>
   </head>
@@ -47,8 +46,10 @@
         </ul>
       </div>
     </nav>
-    <div class="hero-image"></div>
-
+    <div class="hero-image">
+          <img src="{{ url_for('static', filename='images/hero-image.jpg') }}" class="hero-image" alt="A table of Italian food.">
+    </div>
+    
       {% block content %}
       {% endblock %}
     </div>

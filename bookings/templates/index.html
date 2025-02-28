@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
-    <link
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+      <!-- Bootstrap Stylesheet -->
+      <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+      crossorigin="anonymous" type="text/css"/>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css"/>
+    <!-- Favicon-->
     <link
       rel="icon"
       type="image/x-icon"
-      href="/assets/images/favicon/favicon-32x32.png"
-    />
+      href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}"/>
 
+    <!-- Page Title -->
     <title>Ristorante Amalfi</title>
   </head>
   <body>
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-gunmetal">
       <a href="#" class="navbar-brand"><i class="fa-solid fa-utensils"></i> Ristorante Amalfi</a>
       <button
@@ -48,12 +50,18 @@
         </ul>
       </div>
     </nav>
-    <div class="hero-image"></div>
+
+    <!-- Hero Image -->
+    <div class="hero-image">
+      <img src="{{ url_for('static', filename='images/hero-image.jpg') }}" class="hero-image" alt="A table of Italian food.">
+</div>
     <div class="main">
       <section class="summary">
         <div class="container border">
+          <!-- Page Heading -->
           <h2 class="heading">Welcome to Ristorante Amalfi!</h2>
           <div class="row">
+            <!-- Section Paragraph -->
             <div class="col-sm-12 col-md-6">
               <p>Located in the heart of Manchester, Ristorante Amalfi brings the
                 essence of Italy to the city with its traditional yet contemporary
@@ -65,9 +73,13 @@
                 prides itself on using the freshest, locally sourced ingredients,
                 alongside imports from Italy to maintain authentic flavors.</p>
             </div>
-            <div class="col-sm-12 col-md-6">
+
+            <!-- Empty Div for styling purposes -->
+            <div class="col-sm-1 col-md-1"></div>
+            <!-- Section Image -->
+            <div class="col-sm-12 col-md-5">
               <div class="row">
-                  <img src="/assets/images/italian-restaurant.jpg" class="img-fluid meal-image"
+                  <img src="{{ url_for('static', filename='images/italian-restaurant.jpg') }}" class="img-fluid meal-image"
                 alt="An Itialian dish being served."/>
               </div>
             </div>
@@ -78,7 +90,7 @@
               <p>To book via phone call you can contact us on <span id="phone-number">0161 973 4738.</span></p>
             </div>
           </div>
-  
+          <!-- Booking and Menu Buttons -->
           <div class="row summary-btns">
             <div class="col-6">
               <form action="{{ url_for('bookings') }}">
@@ -94,9 +106,11 @@
         </div>
       </section>
     </div>
+    <!-- Footer -->
     <footer>
       <h1><i class="fa-solid fa-utensils"></i> Ristorante Amalfi</h1>
       <div class="row">
+        <!-- Address Column -->
         <div class="col-sm-12 col-md-4">
           <h3 class="footer-headings">
             <i class="fa-solid fa-map-pin"></i> Address
@@ -109,6 +123,7 @@
           <h3 class="footer-headings">Email</h3>
           <p>info@ristoranteamalfi.co.uk</p>
         </div>
+        <!-- Opening Hours Column -->
         <div class="col-sm-12 col-md-4">
           <h3 class="footer-headings">
             <i class="fa-regular fa-clock"></i> Opening Hours
@@ -119,26 +134,36 @@
           <h4 class="footer-headings opening-hours">Saturday</h4>
           <p>12:00PM - 23.00PM</p>
         </div>
+
+        <!-- Map Column -->
         <div class="col-sm-12 col-md-4">
           <i class="fa-solid fa-location-crosshairs"></i>
         </div>
       </div>
+
+      <!-- Credits -->
       <p class="credits">© 2025 Ristorante Amalfi. All rights reserved.</p>
     </footer>
+    <!-- Scripts -->
+
+    <!-- Font Awesome Script -->
     <script
       src="https://kit.fontawesome.com/9126144eb8.js"
       crossorigin="anonymous"
     ></script>
+    <!-- JQuery Script-->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+    <!-- Popper Script -->
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous"
     ></script>
+    <!-- Bootstrap Script -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
