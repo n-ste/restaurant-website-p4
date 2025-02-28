@@ -13,7 +13,7 @@ class Customer(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String, nullable=False)
     last_name = db.Column(db.Text, nullable=False)
-    customer_contact = db.Column(db.Integer, unique=True, nullable=False)
+    customer_contact = db.Column(db.String, unique=True, nullable=False)
     customer_email = db.Column(db.String(50), unique=True, nullable=False)
     reservation_date = db.Column(db.DateTime, unique=True, nullable=False)
 
