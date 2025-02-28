@@ -5,6 +5,8 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+      <meta name="description" content="Italian restaurant in Manchester, UK">
+      <meta name="keywords" content="Italian, Restaurant, Food">
     <!-- Bootstrap Stylesheet -->
       <link
       rel="stylesheet"
@@ -37,27 +39,27 @@
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-gunmetal">
-      <a href="#" class="navbar-brand"><i class="fa-solid fa-utensils"></i> Ristorante Amalfi</a>
+      <a href="{{ url_for('home') }}" class="navbar-brand"><i class="fa-solid fa-utensils"></i> Ristorante Amalfi</a>
       <button
         class="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbar">
+        data-target="#navbar" aria-label="Navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="nav justify-content-center">
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+            <a class="nav-link" href="{{ url_for('home') }}" aria-label="Home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('menu') }}">Menu</a>
+            <a class="nav-link" href="{{ url_for('menu') }}" aria-label="Menu">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('bookings') }}">Bookings</a>
+            <a class="nav-link" href="{{ url_for('bookings') }}" aria-label="Bookings">Bookings</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="{{ url_for('contact') }}">Contact Us</a>
+            <a class="nav-link active" href="{{ url_for('contact') }}" aria-label="Contact Us">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -94,7 +96,7 @@
                 <textarea rows="5" name="messagecontent" id="messagecontent" class="form-control form-labels" placeholder="Message description" required></textarea>
                 <!-- Submit Button -->
                   <div class="col contact-btn">
-                    <button type="submit" class="btn btn-info">Send Message</button>
+                    <button type="submit" class="btn btn-info" aria-label="Send Message">Send Message</button>
                   </div>
               </form>
             </div>

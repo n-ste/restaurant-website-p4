@@ -22,7 +22,7 @@
       <!-- Submit Button -->
       <div class="row reservation-btns">
         <div class="col-12">
-            <button type="submit" class="btn btn-view-booking">
+            <button aria-label="Create Booking" type="submit" class="btn btn-view-booking">
             <i class="fa-solid fa-plus"></i> Create Booking
         </button>      
         </div> 
@@ -37,7 +37,7 @@
                   <h5 class="card-title">{{ reservation.reservation_name }}</h5>
                 </div>
                 <div class="row center">
-                    <a href="{{ url_for('amend-booking.html', reservation_id)}}" class="btn btn-view-booking">Confirm Booking</a>
+                    <a href="{{ url_for('amend-booking.html', reservation_id)}}" class="btn btn-view-booking" aria-label="Confirm Booking">Confirm Booking</a>
                   </div>
               </div>
         </div>

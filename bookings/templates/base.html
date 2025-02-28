@@ -5,47 +5,53 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+      <meta name="description" content="Italian restaurant in Manchester, UK">
+      <meta name="keywords" content="Italian, Restaurant, Food">
+    <!-- Bootstrap Stylesheet -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous" type="text/css"/>
+    <!-- External Stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css"/>
     <link
       rel="icon"
       type="image/x-icon"
       href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}"/>
-
+    <!-- Page Title -->
     <title>Ristorante Amalfi</title>
   </head>
   <body>
+    <!-- Naviagetion -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-gunmetal">
-      <a href="#" class="navbar-brand"
+      <a href="{{ url_for('home') }}" class="navbar-brand"
         ><i class="fa-solid fa-utensils"></i> Ristorante Amalfi</a>
       <button
         class="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbar">
+        data-target="#navbar" aria-label="Navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="nav justify-content-center">
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+            <a class="nav-link" href="{{ url_for('home') }}" aria-label="Home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('menu') }}">Menu</a>
+            <a class="nav-link" href="{{ url_for('menu') }}" aria-label="Menu">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="{{ url_for('bookings') }}">Bookings</a>
+            <a class="nav-link active" href="{{ url_for('bookings') }}" aria-label="Bookings">Bookings</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
+            <a class="nav-link" href="{{ url_for('contact') }}" aria-label="Contact Us">Contact Us</a>
           </li>
         </ul>
       </div>
     </nav>
+    <!-- Hero Image -->
     <div class="hero-image">
           <img src="{{ url_for('static', filename='images/hero-image.jpg') }}" class="hero-image" alt="A table of Italian food.">
     </div>
@@ -53,10 +59,12 @@
       {% block content %}
       {% endblock %}
     </div>
-        
+
+    <!-- Footer -->
     <footer>
       <h1><i class="fa-solid fa-utensils"></i> Ristorante Amalfi</h1>
       <div class="row">
+        <!-- Address Column -->
         <div class="col-sm-12 col-md-4">
           <h3 class="footer-headings">
             <i class="fa-solid fa-map-pin"></i> Address
@@ -69,6 +77,7 @@
           <h3 class="footer-headings">Email</h3>
           <p>info@ristoranteamalfi.co.uk</p>
         </div>
+        <!-- Opening Hours Column -->
         <div class="col-sm-12 col-md-4">
           <h3 class="footer-headings">
             <i class="fa-regular fa-clock"></i> Opening Hours
@@ -85,25 +94,30 @@
       </div>
       <p class="credits">© 2025 Ristorante Amalfi. All rights reserved.</p>
     </footer>
+    <!-- Scripts -->
     <script
       src="https://kit.fontawesome.com/9126144eb8.js"
       crossorigin="anonymous"
     ></script>
+    <!-- JQuery Script -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous">
     </script>
+    <!-- Popper Script -->
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous">
     </script>
+    <!-- Bootstrap Script -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous">
     </script>
+    <!-- External JavaScript Script -->
     <script src="{{ url_for('static', filename='js/script.js') }}">
     </script>
   </body>

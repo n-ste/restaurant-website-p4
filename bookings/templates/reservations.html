@@ -21,7 +21,7 @@
 
             <div class="center">
                 <!-- Bookings Button -->
-                <a href="{{ url_for('add_booking') }}" class="btn btn-view-booking">
+                <a href="{{ url_for('add_booking') }}" class="btn btn-view-booking" aria-label="Create Booking">
                     <i class="fa-solid fa-plus"></i> Create Booking
                 </a>
             </div>
@@ -38,9 +38,9 @@
                 </div>
                 <!-- Complete Booking, Amend Booking and Cancel Booking Buttons -->
                 <div class="row center">
-                    <a href="{{ url_for('add_customer', reservation_id=reservation.id) }}" class="btn btn-view-booking">Complete Booking</a>
-                    <a href="{{ url_for('amend_booking', reservation_id=reservation.id)}}" class="btn btn-view-booking">Amend Booking</a>
-                    <a href="{{ url_for('delete_reservation', reservation_id=reservation.id) }}" class="btn btn-view-booking">Cancel Booking</a>
+                    <a href="{{ url_for('add_customer', reservation_id=reservation.id) }}" class="btn btn-view-booking" aria-label="Complete Booking">Complete Booking</a>
+                    <a href="{{ url_for('amend_booking', reservation_id=reservation.id)}}" class="btn btn-view-booking" aria-label="Amend Booking">Amend Booking</a>
+                    <a href="{{ url_for('delete_reservation', reservation_id=reservation.id) }}" class="btn btn-view-booking" aria-label="Cancel Booking">Cancel Booking</a>
                 </div>
             </div>
         </div>

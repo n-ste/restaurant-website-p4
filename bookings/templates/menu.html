@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
-      <!-- Bootstrap Stylesheet -->
-      <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous" type="text/css"/>
-    <!-- External Stylesheet -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css"/>
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+  <meta name="description" content="Italian restaurant in Manchester, UK">
+  <meta name="keywords" content="Italian, Restaurant, Food">
+  <!-- Bootstrap Stylesheet -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" type="text/css"/>
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css"/>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}"/>
 
     <!-- Page Title -->
     <title>Ristorante Amalfi | Menu</title>
@@ -26,7 +19,7 @@
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-gunmetal">
-      <a href="#" class="navbar-brand"><i class="fa-solid fa-utensils"></i> Ristorante Amalfi</a>
+      <a href="{{ url_for('home') }}" class="navbar-brand"><i class="fa-solid fa-utensils"></i> Ristorante Amalfi</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -37,16 +30,16 @@
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="nav justify-content-center">
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+            <a class="nav-link" href="{{ url_for('home') }}" aria-label="Home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="{{ url_for('menu') }}">Menu</a>
+            <a class="nav-link active" href="{{ url_for('menu') }}" aria-label="Menu">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('bookings') }}">Bookings</a>
+            <a class="nav-link" href="{{ url_for('bookings') }}" aria-label="Bookings">Bookings</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
+            <a class="nav-link" href="{{ url_for('contact') }}" aria-label="Contact Us">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -62,8 +55,8 @@
           <div class="row border container menu-summary">
             <div class="row">
                 <div class="col-12">
-                    <!-- Heading -->
-                    <h2 class="heading">Why not take a look at our delicious menu! But first, here's what to expect!</h4>
+                  <!-- Heading -->
+                  <h2 class="heading">Why not take a look at our delicious menu! But first, here's what to expect!</h2>
                 </div>
             </div>
             <!-- Section Paragraph -->
@@ -86,7 +79,7 @@
         <div class="container border">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="heading">Menu</h4>
+                  <h2 class="heading">Menu</h2>
                 </div>
             </div>
           <div class="row"></div>
@@ -515,7 +508,7 @@
           <div class="row summary-btns">
             <div class="col-12">
               <form action="{{ url_for('bookings') }}">
-                <button type="submit" class="btn btn-info">Book Now</button>
+                <button type="submit" class="btn btn-info" aria-label="Book Now">Book Now</button>
               </form>
             </div>
           </div>

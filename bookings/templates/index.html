@@ -5,6 +5,8 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+      <meta name="description" content="Italian restaurant in Manchester, UK">
+      <meta name="keywords" content="Italian, Restaurant, Food">
       <!-- Bootstrap Stylesheet -->
       <link
       rel="stylesheet"
@@ -25,7 +27,7 @@
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-gunmetal">
-      <a href="#" class="navbar-brand"><i class="fa-solid fa-utensils"></i> Ristorante Amalfi</a>
+      <a href="{{ url_for('home') }}" class="navbar-brand"><i class="fa-solid fa-utensils"></i> Ristorante Amalfi</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -94,12 +96,12 @@
           <div class="row summary-btns">
             <div class="col-6">
               <form action="{{ url_for('bookings') }}">
-                <button type="submit" class="btn btn-info">Book Now</button>
+                <button type="submit" class="btn btn-info" aria-label="Book Now">Book Now</button>
               </form>
             </div>
             <div class="col-6">
               <form action="{{ url_for('menu') }}">
-                <button type="submit" class="btn btn-info">View Our Menu</button>
+                <button type="submit" class="btn btn-info" aria-label="View Our Menu">View Our Menu</button>
               </form>
             </div>
           </div>

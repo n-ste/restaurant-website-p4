@@ -15,23 +15,23 @@
             <div class="form-row center">
                 <div class="col-sm-12 col-md-6">
                     <!-- First Name -->
-                    <label for="first_name" class="uppercase">First Name</label>
+                    <label for="first_name" class="uppercase" aria-label="First Name">First Name</label>
                     <input id="first_name" name="first_name" type="text" class="form-control" placeholder="First name" minlength="3" maxlength="50" required>
 
                     <!-- Last Name-->
-                    <label for="last_name" class="uppercase">Last Name</label>
+                    <label for="last_name" class="uppercase" aria-label="Last Name">Last Name</label>
                     <input id="last_name" name="last_name" type="text" class="form-control" placeholder="Last name" minlength="3" maxlength="50" required>
 
                     <!-- Customer's Mobile-->
-                    <label for="customer_contact" class="uppercase">Mobile</label>
+                    <label for="customer_contact" class="uppercase" aria-label="Mobile">Mobile</label>
                     <input id="customer_contact" name="customer_contact" type="number" class="form-control" placeholder="Mobile" minlength="3" maxlength="50" required>
 
                     <!-- Customer's Email-->
-                    <label for="customer_email" class="uppercase">Email</label>
+                    <label for="customer_email" class="uppercase" aria-label="Email">Email</label>
                     <input id="customer_email" name="customer_email" type="email" class="form-control" placeholder="Email" minlength="3" maxlength="50" required>
 
                     <!-- Reservation Date -->
-                    <label for="reservation_date" class="uppercase">Date of Booking</label>
+                    <label for="reservation_date" class="uppercase" aria-label="Date of Booking">Date of Booking</label>
                     <input id="reservation_date" name="reservation_date" type="datetime" class="form-control" placeholder="Date of Booking" required>
                 </div>
             </div>
@@ -40,7 +40,7 @@
       <!-- Submit Button -->
       <div class="row reservation-btns">
         <div class="col-12">
-            <button type="submit" class="btn btn-view-booking">
+            <button type="submit" class="btn btn-view-booking" aria-label="Complete Booking">
             <i class="fa-solid fa-plus"></i> Complete Booking
         </button>      
         </div> 
@@ -57,7 +57,7 @@
                 </div>
                 <!-- Confirm Booking Button-->
                 <div class="row center">
-                    <a href="{{ url_for('amend-booking.html', reservation_id)}}" class="btn btn-view-booking">Confirm Booking</a>
+                    <a href="{{ url_for('amend-booking.html', reservation_id)}}" class="btn btn-view-booking" aria-label="Confirm Booking">Confirm Booking</a>
                   </div>
               </div>
         </div>
