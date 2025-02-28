@@ -88,6 +88,22 @@
           <h4 class="footer-headings opening-hours">Saturday</h4>
           <p>12:00PM - 23.00PM</p>
         </div>
+        <!-- Map Column-->
+      <gmp-map
+      center="53.473557,-2.183071"
+      zoom="12"
+      map-id="DEMO_MAP_ID"
+      style="height: 300px"
+    >
+      <gmp-advanced-marker
+        position="53.473557,-2.183071"
+        title="Ristorante Amalfi"
+      ></gmp-advanced-marker>
+      <gmp-advanced-marker
+        position="53.473557,53.473557"
+        title="Manchester, United Kingdom"
+      ></gmp-advanced-marker>
+    </gmp-map>
         <div class="col-sm-12 col-md-4">
           <i class="fa-solid fa-location-crosshairs"></i>
         </div>
@@ -117,6 +133,11 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous">
     </script>
+    <!-- Google Map Script -->
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA74vnWUhSEwo3M3QDFzeKAKyt_MJPf_yA&libraries=maps,marker&v=beta"
+    defer
+></script>
     <!-- External JavaScript Script -->
     <script src="{{ url_for('static', filename='js/script.js') }}">
     </script>

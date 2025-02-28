@@ -532,7 +532,6 @@
           <h3 class="footer-headings">Email</h3>
           <p>info@ristoranteamalfi.co.uk</p>
         </div>
-
         <!-- Opening Hours Column -->
         <div class="col-sm-12 col-md-4">
           <h3 class="footer-headings">
@@ -544,17 +543,29 @@
           <h4 class="footer-headings opening-hours">Saturday</h4>
           <p>12:00PM - 23.00PM</p>
         </div>
-
-        <!-- Map Column -->
+        <!-- Map Column-->
+      <gmp-map
+      center="53.473557,-2.183071"
+      zoom="12"
+      map-id="DEMO_MAP_ID"
+      style="height: 300px"
+    >
+      <gmp-advanced-marker
+        position="53.473557,-2.183071"
+        title="Ristorante Amalfi"
+      ></gmp-advanced-marker>
+      <gmp-advanced-marker
+        position="53.473557,53.473557"
+        title="Manchester, United Kingdom"
+      ></gmp-advanced-marker>
+    </gmp-map>
         <div class="col-sm-12 col-md-4">
           <i class="fa-solid fa-location-crosshairs"></i>
         </div>
       </div>
       <p class="credits">© 2025 Ristorante Amalfi. All rights reserved.</p>
     </footer>
-
-    <!-- Scripts-->
-     <!-- Font Awesome Script -->
+    <!-- Scripts -->
     <script
       src="https://kit.fontawesome.com/9126144eb8.js"
       crossorigin="anonymous"
@@ -563,19 +574,27 @@
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous">
+    </script>
     <!-- Popper Script -->
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous">
+    </script>
     <!-- Bootstrap Script -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous">
+    </script>
+    <!-- Google Map Script -->
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA74vnWUhSEwo3M3QDFzeKAKyt_MJPf_yA&libraries=maps,marker&v=beta"
+    defer
+></script>
+    <!-- External JavaScript Script -->
+    <script src="{{ url_for('static', filename='js/script.js') }}">
+    </script>
   </body>
 </html>
