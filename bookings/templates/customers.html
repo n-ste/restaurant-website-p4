@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="heading">Tasks</h2>
+
+<div class="row">
+    <div class="Col-12">
+        <a href="{{ url_for('add_task') }}" class="btn-large light-blue darken-2">
+            Add Task <i class="fas fa-plus-square right"></i>
+        </a>
+    </div>
+</div>
+
+<div id="accordion">
+    {% for customer in customers %}
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <strong>{{ customer.first_name, customer.last_name }} | {{ customer.reservation_date }}</strong>
+          </button>
+        </h5>
+      </div>
+  
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+        <strong>First Name: {{ customer.first_name}}</strong>
+        <strong>Last Name: {{ customer.last_name }}</strong>
+        <strong>Mobile: {{ customer.customer_contact}}</strong>
+        <strong>Email: {{ customer.customer_email}}</strong>
+        <strong>Booking Date: {{ customer.reservation_date}}</strong>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

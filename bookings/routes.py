@@ -5,8 +5,8 @@ from bookings.models import Reservation, Customer
 
 @app.route("/")
 def home():
-    return render_template("index.html")
-
+    customers = list(Customer.query.order_by(Customer.reservation_date).all())
+    return render_template("index.html", customers=customers)
 
 @app.route("/menu")
 def menu():
