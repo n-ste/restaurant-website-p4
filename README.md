@@ -1,10 +1,10 @@
 # Ristorante Amalfi - Restaurant Website
 
-![Ristorante Amalfi - Restaurant Website](documentation/images/ristorante-amalfi.png)
+![Ristorante Amalfi - Restaurant Website](documentation/images/responsive.png)
 
 Portfolio 4 Assignment Submission
 
-Live site can be found [here](-)
+Live site can be found [here](https://ristorante-amalfi-p4-a86559e261af.herokuapp.com/)
 
 ## Contents
 
