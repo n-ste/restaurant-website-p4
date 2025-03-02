@@ -262,11 +262,12 @@ Live site can be found [here](https://ristorante-amalfi-p4-a86559e261af.herokuap
 
 ![Updating Database](documentation/images/updating-database.png)
 
-- Pending
+- Resolved
 
 ##### Bugs
 
-- Pending
+- Unable to allowe the user to complete the booking.
+    -  Given more time I would have developed this more and created a separate class to reference back to to display the output of the form.
 
 ##### Lighthouse
 
